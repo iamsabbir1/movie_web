@@ -9,13 +9,12 @@
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.exe",
-				"|",
-				"${fileBasenameNoExtension}.exe",
-				"<",
-				"input.txt",
-				">",
-				"output.txt"
-				
+                "&",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "<",
+                "${fileDirname}/input.txt",
+                ">",
+                "${fileDirname}/output.txt"
 				
             ],
             "group": {
