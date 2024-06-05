@@ -1,0 +1,71 @@
+// Base build and run
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Customize Build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+				"|",
+				"./${fileBasenameNoExtension}",
+				
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc",
+			"detail": "Generated task by vscode"
+			
+        },
+    ]
+}
+
+
+
+
+
+
+
+//Customized Build and Run With cmd.exe
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Customize Build",
+            "type": "cppbuild",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+				"|",
+				"${fileBasenameNoExtension}.exe",
+				"<",
+				"input.txt",
+				">",
+				"output.txt"
+				
+				
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc",
+			"detail": "Generated task by vscode",
+			"options":{
+				"shell":{
+					"executable": "cmd.exe",
+					
+				}
+			}
+			
+        },
+    ]
+}
