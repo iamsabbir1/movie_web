@@ -1,0 +1,200 @@
+001. Space Time Complexity Introduction
+     *Order Complexity Analysis
+        -> Amount of time/space taken by the algorithm to run as a function of the input size
+            -what algorithm is better than other algorithm
+            *memory limit
+            *time limit
+            *would be the price of algorithm
+                -> cost - is form of space
+                    -how much extra memory this algorithm will take?
+                        -may take extra space , may not take extra space
+
+                -> 1st priority  Reduce time 
+                
+                -actual time is known as - experimental Analysis
+                    *experimental analysis not worth our afford, because
+                    -step1: write the code
+                    -step2: then execute the code
+                    -note the time taken
+                    -plot and see which algorithm is better
+
+                *estimate time theorytically   
+
+
+                -> Both time and Space are going to be some function of input
+                    
+                    Time proportion to f(N)
+                    Space proportion to f(N)
+
+                    -time may grow Linearly,
+                        it could be qudratic function,
+                        - Linear function, constant function
+
+                    *constant complexity wirtten as O(1)
+
+                    -next -> how you will actually measure the run time of the algorithm and experimental analysis
+
+
+002. Experimental Analysis
+     -learn how you can actually measure the run time
+        library has time stamp 
+
+        Input(N) -> Time Merge Sort(NLogN) -> Bubble Sort(N*N)
+        100             0                           0
+        1000            1                           9
+        10000           1                         844
+        100000         16                       79937
+        1000000       182                       
+
+
+        Bubble sort follow qudratic function
+
+        -> how to O(NLogN) and O(N*N) factors came
+        growth factor
+
+003. Big O Notation
+     -We will learn about theorytical analysis
+     -> Big Oh Notation - what does big oh notation?    
+        -provide mathematical notation, to understand  the complexity of an algorithm
+
+        *time some function of N
+        Time = 7a^2 + bn + c
+
+        *exponential complexity - subset
+        *optimization - the term is used to reduce the time of the algorithm
+            -by using the appropriate data structure
+            -and by using a technique like sorting,serching
+
+            -learing data structure
+                -> how to apply these data structure    
+                    to bring down the complexity of 
+        
+    Theorytical Analysis
+        -> Loop based examples
+        -> Buble sort
+        -> Binary search
+        -> Factorial 
+        -> Polynomial Evaluation
+        -> Fibonacci 
+
+
+004. Nested Loops
+     Example -1 Loop based
+     *compute time as function of n - T = f(N);
+
+     T = k* N*(N+1)/N
+     O(N^2)
+
+
+005. Nested Loops -II
+     Example-2 Loop based
+
+     T = O(N);
+
+
+
+006. Analysis of Bubble Sort
+     -> Worst Case - algorithm have maximum number of interation
+     -> Best Case - minimum number of iteration
+
+
+     *maximum number of swap
+
+
+007. Analysis of Binary search
+
+     complexity of Binary search algorithm
+        -> intutively
+
+        N -> N/2 -> N/4 -> N/8 -> N/16 -> N/32 ->... -> N/(2^k);
+        *some kth iteration one item will be there
+
+        N/(2^k) = 1;
+        N = 2^k
+        k = LogN (base2)
+
+        O(LogN)
+
+
+        *Online Judge
+            -> Roughly time limit 1s
+                -> program can run up to 10^8 iteration
+
+                10^8 -  1s
+                10^9 - 10s -> TLE 
+
+            -another 
+                10^8 - 1s
+                1    - 10^-8
+                30   - 3 * 10 ^ -7
+
+    One more method to compute time complexity
+        -> by making Equation
+            -> T(N) = K + T(N/2)
+            -> T(N/2) = K + T(N/4)
+            -> T(N/4) = K + T(N/8)
+            ..      ...     ...
+            ..      ...     ...
+            -> T(1)    = K + 0
+
+            Add all the Equation 
+            T(N) = Summation of k
+            T(N) = klogN
+
+            T(N) = O(LogN)
+        
+
+
+008. Analysis of Merge Sort
+     complexity of Merge sort 
+        -divid and conquer based algorithm
+            -3 step 
+            -recursive
+            - Equation method
+      
+      4 2 1 4 1 3 5 2
+     4 2 1 4      1 3 5 2 
+    4 2   1 4   
+
+    1. break it into two parts
+
+    T(N) = k + T(N/2) + T(N/2) + KN - Thats the recurrence relation , we need to solve
+
+    *Need to solve some recurrence Equation
+
+    -How complexity of Merge sort NlogN?
+        -it close to Linear
+
+
+009. Avoiding TLE Errors
+
+     How you can figure out what complexity will work for a given problem?
+     -constraints t,n, 
+     concept of time limit
+
+     1s - 4s -> 
+     this is the trick,
+        you are bound to get time limit execeded
+
+     what complexity will pass?
+     1M -> O(nlogn) or lesser
+
+     *complexity pass
+
+     *constraint given that you are able to think of - the complexity of the algorithm,you thinking will pass or not
+
+
+     010. Complexities for Worst Case AC
+            common Complexities that will pass the worst case given the constraints
+
+        *in 1 second
+            N           worst Case AC               Example
+           < 11             O(!N), O(N^6)         Permutation  -1s TL
+           < 18             O(2^n * n*n)            dp+tsp
+           < 22             O(2^N * N) 
+           < 100            O(N^4)
+           < 400            O(N^3)                  FloydWarshal
+           < 2k             O(N^2 logN)             NestedLoops + Binary search
+           < 10k            O(N^2)                  NestedLoops , Bubble sort
+           < 1M             O(NlogN)                Merge Sort
+           <= 100M          O(N), O(LogN), O(1)     Many Problems

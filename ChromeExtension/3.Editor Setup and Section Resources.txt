@@ -1,0 +1,7 @@
+Extension - Prettier ,install it. Its a code formatter
+
+File -> Preference -> Setting(Ctrl+,) -> Search for format -> Default Formatter - select esbenp.prettier-vscode
+
+check format on Save option
+
+that's all setup

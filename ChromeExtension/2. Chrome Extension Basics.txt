@@ -1,0 +1,42 @@
+1. Section Overview
+   *basic building blocks of chrome extension
+
+    -Key Takeways
+	-Loading our first chrome extension
+	-Basic UI with popup and options page
+	-Common Chrome APIs: background scripts,storage alarm and notifications 
+	-Basic user interface with a pop up and options page using JS/html/css
+	*Chrome developer documentation
+	-Basic Timer extension
+	*Solid fouondation of what a basic growth section is like
+
+3. Editor Setup and Section Resources
+   Extension - Prettier ,install it. Its a code formatter
+
+   File -> Preference -> Setting(Ctrl+,) -> Search for format -> Default        Formatter - select esbenp.prettier-vscode
+
+   check format on Save option
+
+   that's all setup
+
+
+
+4. Manifest File
+   Rely on chrome developer documentation- developer.chrome.com
+	-Everything chrome extension related
+
+	-Click Start builing
+		-chrome related different stuff
+		- go to extension
+			-read basic building block of chrome extension
+	-Manifest file tells the chrome browser what your chrome extension is supposed to be doing
+
+	-manifest file lists important information about the structure and behavior of extension
+
+
+	-Create a folder called Timer-extension
+		-inside paste alarm clock png
+		-create manifest.json file
+			-initialize it
+			-manifest version - tell which manifest should use
+		-"version" - means chrome extension version - made be developer

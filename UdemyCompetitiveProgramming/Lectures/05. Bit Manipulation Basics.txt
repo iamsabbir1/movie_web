@@ -1,0 +1,43 @@
+001. Bitwise Operators
+    -Bit-manipulation Techniques
+    -algorithm to modify data at their binary representation level
+
+    -Bitwise operator 
+        -operation on binary representaion data we have
+        -how to use this bitwise operator
+        -what are the different types of operator
+        -how twe can use them to sovle this problem
+        -reason why we use bitwise operator 
+            bcz they operate binary representaion of the data
+            they are fast , compare to non-bitwise operator
+
+        -types of operator
+            6 types
+
+        -not operator
+            most significant bit is signed bit
+        
+            int a = 0;
+            cout << ~(a);
+
+            it will print -1, but why?
+
+            0 = 00000000
+              = 11111111
+                      
+              = 10000000
+                      +1
+            magnitude -
+
+            where zero is an integer it's invert is -1
+
+002 Left Shift & Right Shift
+    Both left shift and right shift clear
+
+
+004 Get ith Bit
+    get ith bit
+    set ith bit
+    clear ith bit
+
+005 clear ith bit

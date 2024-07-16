@@ -1,0 +1,75 @@
+ 1. Introduction
+    Chrome Extension development 2021
+	-using modern web frameworks
+	
+    Core Topics
+	simple extension javaScript,html and css
+	modern web framework
+		-TypeScript
+		-React
+		-Webpack
+		-npm
+	- Comprehensive extension development
+	- Modern Web Frameworks
+	- Real World Project Based Learning
+	- General Software development skills
+    
+    Target Audience
+	-Anyone with basic web skills (Basic JS/HTML/CSS/React Syntax)
+
+
+2. Course Overview
+   Intro Track
+	i. Chrome Extension Basic
+		- Introduction to Chrome APIs
+		- Basic timer extension built in JS and HTML/CSS
+	
+	ii. Study Timer Extension Project
+		-Hands on beginner project building a production grade study
+		 timer (Pomodoro) extension using JS and HTML/CSS
+
+	ii. Data Fetching
+		- Build a TV show search extension using new Chrome APIs
+		- Data fetching using HTTP requests to third party APIs
+
+   Intermediate Track
+	iv. Webpack Build System
+		- Design a build system that enables the use of TypeSript
+		  and React code in our extension using a single command
+	
+	v. Weather Extension Project
+		-Multi-featured weather extension using React and TypeScript
+		-Introduces Material UI components library
+		-Integrates nearly every Chrome API learned in the course
+
+	vi. Ad Blocker Extension Project
+		- Basic principles behind a simple ad blocker in TypeScript
+		- Light Discussion about the current state of ad blockers
+
+   Closing Track
+	
+	vii. Chrome Webstore publishing
+		- Deploy your chrome extensioin for the world to see!
+
+	viii. Chrome Themes
+		- Optional bonous section covering the basics of Chrome
+		  Themes
+
+
+3. Why Build Chrome Extensions
+   Key Reasons
+	- Simple and cheap to build and deploy
+		-$5 , signup for a single account, that allows you to
+		 publish multiple extensions
+
+	- Great for personal projects or personal use
+	- Transferable skills using modern web frameworks
+	- Easily turn static web apps into extensions
+	- Lots of flexibility to be creative
+
+	* Turning static web apps into extensions
+   
+	* simple utility extension
+	* Advance extension - coupon extension,huddy - connected to backend 	  server
+	* self-contained extension
+	* HGP requests, which allows you to retrive data from a backend 	  server

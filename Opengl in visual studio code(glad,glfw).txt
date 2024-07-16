@@ -1,0 +1,14 @@
+
+	-> download glad from - https://glad.dav1d.de/
+		-> Language - C/C++
+		-> Specification - OpenGL
+		-> Api -> gl - version 3.3
+		-> Profile - Core
+		-> Tick Generate loader
+			-> Click Generate
+				-> download glad zip 
+	-> download glfw from - https://www.glfw.org/download.html
+
+-> make a folder
+	-> paste include and src from glad folder
+	-> past glfw to include folder

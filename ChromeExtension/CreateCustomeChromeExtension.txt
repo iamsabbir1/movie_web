@@ -1,0 +1,33 @@
+-> create a manifest.json file
+	-paste following code
+	{
+  		"manifest_version": 3,
+  		"name": "Hello Extensions",
+ 		"description": "Base Level Extension",
+  		"version": "1.0",
+  		"action": 
+		{
+    			"default_popup": "hello.html",
+    			"default_icon": "hello_extensions.png"
+  		}
+	}
+
+-> download any or icon / or make an existing icon
+	-name it
+
+-> create hello.html file
+	-paste the following code
+	<html>
+  	<body>
+    		<h1>Hello Extensions</h1>
+  	</body>
+	</html>
+
+-> make these files in a separate folder
+
+-> Load an unpacked extension
+	-make sure you enable Developer mode in ManageExtension
+	-click load unpacked and give/select the extension directory
+
+-this will be added your custom hello extension
+-pin this extension and click to check

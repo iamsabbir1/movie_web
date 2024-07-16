@@ -1,0 +1,12 @@
+button
+{
+    display: block;
+    text-align: center;
+    font-size: larger;
+    margin: auto;
+}
+
+body{
+    width: 400px;
+    height: 400px;
+}

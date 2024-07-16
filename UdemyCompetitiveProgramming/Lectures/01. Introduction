@@ -1,0 +1,192 @@
+001. Introduction
+    -specialization on competitive programming
+        -specialization on algorithm
+        -algorithm and advance dsa
+        @Mentor - Pateek Vai, Software Engineer, Founder(CodingMinute),Engieering Lead
+                - instructor at udemy
+                -> Level-2 - Data Structures & Algorithm Essentials
+                -> Level-3 -  Data Structures & Algorithms Level Up for Coding Interviews
+                -> Level-4 - Competitve Programming Essentials
+
+        -What to expect after this course?
+            -Master well known techniques in algorithm & competitive programming
+            -Thinking of optimization
+
+            *competitive programming is all about sharpening your skills
+    - Pre-requisites!
+        -Basic understanding of any programming language(C++)
+        -Data Structures
+            -Linked list
+            -Hast Table
+            -Heap
+    - 10 Module
+        -Each module has 4 to 5 sections
+    
+    - 1. Basic & STL
+      2. Mathematics
+      3. Number Theory
+      4. Algorithms
+      5. Recursion
+      6. Range Queries
+      7. Game Theory
+      8. Graphs
+      9. Dynamic Programming
+      10. Advanced Topics
+
+
+    The course is divided into multiple modules, as described below. Each module has multiple sections.
+
+    Module-1 Data Structures Recap
+
+    Section 3. Space Time Complexity Analysis
+
+    Section 4. Data Structures & STL Containers
+
+    Section 5. Bitmanipulation Basics
+
+    Section 6. Bitmanipulation Problems
+
+
+
+    Module-2 Mathematics
+
+    Section 7. Big Integers
+
+    Section 8. Linear Recurrences & Matrix Exponentiation
+
+    Section 9. Pigeonhole Principle
+
+    Section 10. Mathematical Expectation
+
+    Section 11. Inclusion-Exclusion
+
+
+
+    Module-3 Number Theory
+
+    Section 12. Prime Numbers & Factorisation
+
+    Section 13. Extended Euclidean Algorithm
+
+    Section 14. Theorems in Number Theory
+
+    Section 15. Combinatorics
+
+
+
+    Module-4 Algorithms
+
+    Section 16. Recursion
+
+    Section 17. Backtracking
+
+    Section 18. Binary Search
+
+    Section 19. Divide & Conquer
+
+    Section 20. Greedy Algorithms
+
+    Section 21. Meet in Middle
+
+
+
+    Module-5 Range Queries
+
+    Section 22. Segment Trees
+
+    Section 23. Lazy Propagation
+
+    Section 24. Fenwick Trees
+
+    Section 25. Square Root Decomposition
+
+
+
+    Module-6 Game Theory
+
+    Section 27. Combinatorial Games
+
+    Section 28. NIM Game
+
+
+
+    Module-7 Graph Theory
+
+    Section 28. Graph Traversals
+
+    Section 29. Graphs as Trees
+
+    Section 30. Lowest Common Ancestor
+
+    Section 31. Directed Graphs & SCC
+
+    Section 32. Disjoint Set Union
+
+    Section 33. Spanning Trees
+
+    Section 34. Shortest Paths
+
+
+
+    Module-8 Dynamic Programming
+
+    Section 35. Classical DP
+
+    Section 36. Advanced DP
+
+
+
+    Module-9 Pattern Matching
+
+    Section 37. Pattern & String Matching
+
+
+
+    Module-10 Advanced Topics
+
+    Section 38. Geometric Algorithms
+
+    Section 39. Interactive Problems
+
+    Section 40. Random Randomisation
+
+    Section 41. Policy Based Data Structures
+
+
+
+
+    - 5 to 6 months to complete
+
+    -> Ready for some serious Brain Exercise
+    -> You can find solutions to exercises, if needed at the following link.
+    https://github.com/apaarkamal/Coding-Minutes-Competitive-Programming
+
+
+Frequently Asked Questions
+======================
+
+
+How should I proceed with the course?
+Watch video lectures in each section, make your own notes of topics you are "likely" to forget. Code the examples/ algorithm discussed on your own and then try our assignments (Coding Exercises) given in each section.
+
+
+
+How do I remain consistent?
+Consistency is a key to success. Set up weekly/monthly milestones to track your progress. Find an accountability partner (generally a close friend) whom can follow-up with on regular basis about the course progress.
+
+
+
+How do I get help from TA's or Instructors / share my code?
+You can post your doubts, using the Q-A Section from course dashboard. Our TA's/ Instructors generally reply on the same day for most queries. To save the code, you can save it on an Online IDE and then share link.
+
+
+
+Do I need memorise specific algorithms?
+No at all, having a general idea of working of various algorithms is a good thing. In real life software development, new challenges come up everyday which require fresh thinking and breaking down complex problems. Having a general knowledge about concepts is helpful but you don't need memorise the exact steps.
+
+I am preparing for interviews. Should I do this course?
+This course is an advance course, with a focus on cracking online competitions. Most Interview problems are easier than what we have covered in this course. You can do this course after mastering the basics if you have sufficient time.
+
+I know a programming language other than C++. Can I do this course?
+The course focus is on techniques and algorithms, hence the choice of programming language doesn't matter much. However, on Udemy the programming assignments need to submitted in one language only which we have kept as C++. Unfortunately the Code Evaluation system, doesn't support submissions in multiple languages.
+

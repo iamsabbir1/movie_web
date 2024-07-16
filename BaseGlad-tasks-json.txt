@@ -1,0 +1,80 @@
+{
+    "version" : "2.0.0",
+    "tasks" : [
+        {
+            "type": "cppbuild",
+            "label": "Modern OpenGl",
+            "command": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\g++.exe",
+            "args":[
+                "-g",
+                "-std=c++17",
+                "-I${workspaceFolder}/include",
+                "-L${workspaceFolder}/lib",
+                "${workspaceFolder}/src/*.cpp",
+                "${workspaceFolder}/src/glad.c",
+                "-lglfw3",
+                "-lgdi32",
+                "-luser32",
+                "-o",
+                "${workspaceFolder}/zmmr.exe",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compiler: C:\\Program Files\\CodeBlocks\\MinGW\\bin\\g++.exe"
+        }
+    ]
+}
+
+
+
+
+//output same line
+{
+    "version" : "2.0.0",
+    "tasks" : [
+        {
+            "type": "shell",
+            "label": "build",
+            "command": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\g++.exe",
+            "args":[
+                "-g",
+                "-std=c++17",
+                "-I${workspaceFolder}/include",
+                "-L${workspaceFolder}/lib",
+                "${workspaceFolder}/src/*.cpp",
+                "${workspaceFolder}/src/glad.c",
+                "-lglfw3",
+                "-lgdi32",
+                "-luser32",
+                "-o",
+                "${workspaceFolder}/zmmr.exe",
+                "|",
+                "${workspaceFolder}/zmmr.exe"
+
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compiler: C:\\Program Files\\CodeBlocks\\MinGW\\bin\\g++.exe"
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "${workspaceFolder}/zmmr.exe",
+            "group": "test",
+            "dependsOn": ["build"],
+            "problemMatcher": []
+        }
+    ]
+}

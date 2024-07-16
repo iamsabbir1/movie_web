@@ -1,0 +1,259 @@
+001.    Data Structure & STL Containers Revisited
+        -> data Structure quick recap
+        -> c++ STL
+        -> Template, create any data type
+        -> collection framework in java
+
+        Containers is an object that stores a collection of other objects(elements)
+        - Set is a collection of elements
+
+                1. Sequence Containers
+                        i. Array
+                        ii. Vector
+                        iii. Deque
+                        iv. Forward List
+                        v. List
+                2. Associative Containers
+                        i. Set
+                        ii. Map
+                        iii. Multiset
+                        iv. Multimap
+                3. Unordered Associative Containers
+                        i. Unordered Set
+                        ii. Unordered Map
+                        iii. Unordered Multiset
+                        iv. Unordered Multimap
+
+                4. Containers Adaptors
+                        i. Stack
+                        ii. Queue
+                        iii. Priority Queue
+
+002. Array in c++
+        -> Array
+                i. Classical Array
+                ii. STL based Array
+        -> passing array to function 
+                int arr[] - in main function this is an actual object
+                          - in a function this is only an address 
+
+                warning: 'sizeof' on array function parameter 'arr' will return size of 'int*' [-Wsizeof-array-argument]
+                cout << "Array size in Function " << sizeof(arr) << endl;
+
+                array size main is 20
+                and array size function in 8
+                -> how this is happening?
+
+                main -> 
+                        5 * 4 = 20
+                function call -> pass address -> pointer variable
+                2022 address 
+                pointer variable is taking 8 byte to store this particular address
+                and this why you cannot execute 
+                        - int n = sizeof(arr)/sizeof(int) 
+                        in particular function 
+
+                        -that is why you should explicitly pass - n
+
+                        *Classical arrays
+
+
+003. Array STL
+        #include <array>
+
+        array<int,6> arr;
+        -either take input or store in the array;
+        -how to pass an array object to a particular function
+        array object?
+
+        -all stl Containers are passed by values
+
+        -for change pass reference by value
+        reference variable
+
+        -how containers are passed by reference?
+        -reference variable
+
+        there refer to the same object in memory
+                -alias -> you have a name also have nickname
+
+        -> in Classical array we have to pass the value of n as well
+        - in array stl we are passing entrie object not passing base address  
+        
+        -> that's make the work easy for you
+        - if i don't want to create a copy of the arry i want to pass it by reference
+        and i don't want to change my actual array i can use const before the -make it const
+        const -> readonly function , it should not be modifying
+        constant parameter - read only mode
+
+        const - good practice
+        -practice const with read only data members
+
+        -this is the correct way of writing the code
+        -this is how the array object are passed.
+
+
+
+        *more method
+        -iterator -
+                arr.end() - the address after the last element
+                #include <algorithm>
+
+        - sort Classical array
+
+        -one more commong operation
+                you might be required to all zeros
+        
+        array<int,10> fives;
+        fives.fill(5);
+
+        - one more method , for each loop
+        for(int x: fives)
+                cout << x;
+        -how foreach loop work
+                -x gets a value of array
+                -iterating over the values
+        For loop
+                i. normal for loop
+                ii. for each loop -iterating over the values no indices
+                : colon operator
+
+
+        array container
+
+
+004 Vector STL
+        -vector is a dynamic array
+
+        -array class, difference between classical array and c-style-array
+        -how the resize is happen
+
+        -the vector double itself
+                -create new array dynamically
+                        -copy elements
+                        -reallocation happen
+        -original array would be deleted
+        -new array , new memory location
+        -its a Sequence container
+        -need to call some function
+
+        -[] , overloaded operator
+        -why don't have a push_front method of array
+        -all the empty location are the back of the array
+
+        -reserve() - 
+        -double itself
+
+        -there is not additional space in the front
+        -clear() , size may zero - but the capacity not changed
+
+        -demo , how do we work with vector
+        -arrange constructors
+                construct vector from an array
+                int numbers[] = {10,20,30,40}
+                vector<int> third(numbers,numbers+4)
+
+        -copy constructors
+                vector<int> fourth(third);
+                copy constructor to create an object
+
+        -constructor vector using initialization list
+                vector<int> arr = {1,2,3,4,5,10};
+
+        -another way take input and push_back
+                capacity means how much storage has been allocated for that particular vector
+
+
+                if  capacity is full it double itself
+
+                - size!= capacity
+                capacity remain same
+
+                *demo - how to work with vector
+
+        -there is repeating doubling operation that is happening -> expensive operation->   doubly -> spending linear time
+        that makes push_back operation 
+
+        -inorder to avoid that 
+                -v.reserve(100);
+                        -i konw there would be atleast 100 element in the vector
+                
+                -another way to avoid it 
+                        create a vector 1000 element initilize with zero
+
+                there is a difference between fill construct and reserve
+        
+005 Deque STL
+        -deque means doubly ended queue
+        -sequence container
+        -dynamic size that can be expaned or contracted on both ends
+        -special property
+
+        push_front(),pop_front(),push_back(),pop_back()
+        - example implement in sliding window of a kind of algorithm
+
+        window -expand and contract
+        -not contiguos
+        -scattered
+
+        -few important methods
+
+        -few way to initilize deque
+
+        deque<int> first;
+        deque<int> second(4,100);
+        deque<int> third (second.begin(),second.end());
+        deque<int> fourth(third);
+
+        -use an array
+        -iterate over the array
+
+        int myints[] = {13,3,35,12};
+        int n = sizeof(myints)/sizeof(int)
+        deque<int> fifth(myints,myints+n);
+
+        -lookup documentation
+        do constant time
+
+        *demo
+006 Stack STL
+        -Online
+        -Interview
+        -core concept
+        -cpp.com
+        -c++.com
+
+008 Queue STL
+        -queue standard template library
+        that's all for this lecture , thank you
+
+008 Priority Queue STL
+        -inbuilt priority queue as a heap data structure
+
+        class priority_queue
+        -what can we do
+                - we can iterate over all the elements
+
+        by default priority_queue is a max heap
+        if i want to mean heap, what can i do?
+        -provide two more parameter
+        priority_queue<int, vector<int>, greater<int>> heap //this is a min heap
+        -it is a inbuilt comparator
+
+        How to create own custom comparator?
+        for particular class
+
+        compare function not called directly, call it internally
+
+        operator() - overloading the round bracket
+
+
+009 Sets & Unordered Sets | Hashing Webinar
+
+        -Hashtables,Sets & Map
+        Datastructure , specialized 
+        tow things in mind
+        -how to work these datastruture
+        -how to use these datastructures
+
+        -container is nothing but a data structure

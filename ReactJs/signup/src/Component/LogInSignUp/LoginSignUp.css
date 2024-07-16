@@ -1,0 +1,14 @@
+body
+{
+    background-color: #432f90;
+}
+
+.Container
+{
+    width: 540px;
+    background-color: aliceblue;
+    height: 700px;
+    margin: auto;
+    margin-top: 75px;
+    border-radius: 40px;
+}
