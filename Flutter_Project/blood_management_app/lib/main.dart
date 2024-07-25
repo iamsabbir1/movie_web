@@ -1,3 +1,5 @@
+import 'package:blood_management_app/background/prac_background.dart';
+import 'package:blood_management_app/screens/auth.dart';
 import 'package:blood_management_app/widgets/login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -24,11 +26,18 @@ class MyApp extends StatelessWidget {
         colorScheme: kColorScheme,
         textTheme: GoogleFonts.openSansTextTheme(),
         primaryColor: kColorScheme.primary,
+        iconTheme: Theme.of(context).iconTheme,
       ),
       darkTheme: ThemeData.dark().copyWith(
         colorScheme: kColorScheme,
         textTheme: GoogleFonts.openSansTextTheme(),
-        primaryColor: kColorScheme.primary, //here is primary color
+        primaryColor: kColorScheme.onSurface,
+        iconTheme: Theme.of(context).iconTheme.copyWith(
+              color: Colors.white,
+            ),
+        scaffoldBackgroundColor: Theme.of(context)
+            .colorScheme
+            .onInverseSurface, //here is primary color
       ),
       home: const Login(),
     );

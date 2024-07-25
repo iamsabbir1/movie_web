@@ -24,16 +24,12 @@ class _LoginState extends State<Login> {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
 
-    print(width);
-    print(height);
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Stack(
           children: [
             CustomPaint(
-              size: Size(MediaQuery.of(context).size.width,
-                  MediaQuery.of(context).size.height),
+              size: Size(width, height),
               painter: HomeBackground(),
             ),
             Positioned(
@@ -62,7 +58,7 @@ class _LoginState extends State<Login> {
               ),
             ),
             Positioned(
-              top: 220, // Adjust based on your layout
+              top: 190, // Adjust based on your layout
               left: 20,
               right: 20,
               child: Container(
@@ -98,7 +94,7 @@ class _LoginState extends State<Login> {
                               keyboardType: TextInputType.emailAddress,
                             ),
                             const SizedBox(
-                                height: 20), // Spacing between fields
+                                height: 10), // Spacing between fields
                             TextFormField(
                               validator: (value) {
                                 // Validate password input
@@ -125,7 +121,7 @@ class _LoginState extends State<Login> {
                             ),
                           ],
                         )),
-                    const SizedBox(height: 30), // Spacing before the button
+                    const SizedBox(height: 20), // Spacing before the button
                     GestureDetector(
                       onTap: () {
                         // Handle forgot password
@@ -139,48 +135,44 @@ class _LoginState extends State<Login> {
                         'Forgot password?',
                       ),
                     ),
-                    const SizedBox(height: 20), // Spacing before the button
+                    const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           _formKey.currentState!.save();
                         }
-                        // Handle sign in
-                        print('Email: $_email');
-                        print('Password: $_password');
-                        // Navigator.of(context).pushReplacement(
-                        //   MaterialPageRoute(
-                        //     builder: (context) => const BloodManagementApp(),
-                        //   ),
-                        // );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        minimumSize:
-                            const Size(double.infinity, 50), // Button size
-                        elevation: 5,
-                      ),
-                      child: const Text('Sign In'),
-                    ),
-                    const SizedBox(height: 20), // Spacing before the button
-                    const Text('Don\'t have an account?'),
-                    const SizedBox(height: 20), // Spacing before the button
-                    ElevatedButton(
-                      onPressed: () {
-                        // Handle sign up
-                        Navigator.of(context).push(
+                        Navigator.of(context).pushReplacement(
                           MaterialPageRoute(
-                            builder: (context) => const SignUp(),
+                            builder: (context) => const BloodManagementApp(),
                           ),
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        minimumSize:
-                            const Size(double.infinity, 50), // Button size
-                        backgroundColor: Colors.red[200],
+                        minimumSize: const Size(double.infinity, 50),
+                        elevation: 5,
                       ),
-                      child: const Text('Sign Up'),
+                      child: const Text('Sign In'),
                     ),
-                    const SizedBox(height: 20), // Spacing before the button
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'Don\'t have an account?',
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const SignUp(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            'SignUp',
+                          ),
+                        ),
+                      ],
+                    ),
 
                     const Text('Or sign in with'),
                     const SizedBox(height: 20),
@@ -192,49 +184,6 @@ class _LoginState extends State<Login> {
                       ),
                       onPressed: () {},
                       child: const Text('Sign in with phone'),
-                    ),
-                    const SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {
-                            // Handle sign in with Google
-                          },
-                          style: ElevatedButton.styleFrom(
-                            minimumSize: Size(
-                                MediaQuery.of(context).size.width * 0.35,
-                                50), // Button size
-                            backgroundColor: Colors.red[200],
-                          ),
-                          child: const Row(
-                            children: [
-                              FaIcon(FontAwesomeIcons.google),
-                              SizedBox(width: 10),
-                              Text('Google'),
-                            ],
-                          ),
-                        ),
-                        const Spacer(),
-                        ElevatedButton(
-                          onPressed: () {
-                            // Handle sign in with Facebook
-                          },
-                          style: ElevatedButton.styleFrom(
-                            minimumSize: Size(
-                                MediaQuery.of(context).size.width * 0.35,
-                                50), // Button size
-                            backgroundColor: Colors.blue[200],
-                          ),
-                          child: const Row(
-                            children: [
-                              FaIcon(FontAwesomeIcons.facebook),
-                              SizedBox(width: 10),
-                              Text('Facebook'),
-                            ],
-                          ),
-                        )
-                      ],
                     ),
                   ],
                 ),

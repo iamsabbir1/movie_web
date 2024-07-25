@@ -1,5 +1,4 @@
 import 'package:blood_management_app/background/home_background.dart';
-import 'package:blood_management_app/widgets/login.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget {
@@ -27,8 +26,10 @@ class _SignUpState extends State<SignUp> {
         child: Stack(
           children: [
             CustomPaint(
-              size: Size(MediaQuery.of(context).size.width,
-                  MediaQuery.of(context).size.height),
+              size: Size(
+                MediaQuery.of(context).size.width,
+                MediaQuery.of(context).size.height,
+              ),
               painter: HomeBackground(),
             ),
             Positioned(
@@ -44,7 +45,7 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
             Positioned(
-              top: 200,
+              top: 190,
               left: 20,
               right: 20,
               child: Container(
@@ -65,7 +66,7 @@ class _SignUpState extends State<SignUp> {
                           ),
                           keyboardType: TextInputType.emailAddress,
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 8),
                         TextFormField(
                           decoration: InputDecoration(
                             labelText: 'Email',
@@ -77,7 +78,7 @@ class _SignUpState extends State<SignUp> {
                           ),
                           obscureText: true,
                         ),
-                        const SizedBox(height: 30),
+                        const SizedBox(height: 8),
                         TextFormField(
                           decoration: InputDecoration(
                             labelText: 'Phone Number',
@@ -89,7 +90,7 @@ class _SignUpState extends State<SignUp> {
                           ),
                           obscureText: true,
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 8),
                         TextFormField(
                           decoration: InputDecoration(
                             labelText: 'Password',
@@ -101,7 +102,7 @@ class _SignUpState extends State<SignUp> {
                           ),
                           obscureText: true,
                         ),
-                        const SizedBox(height: 30),
+                        const SizedBox(height: 8),
                         TextFormField(
                           decoration: InputDecoration(
                             labelText: 'Confirm Password',
@@ -115,7 +116,7 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ],
                     )),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 8),
                     DropdownButtonFormField<String>(
                       decoration: const InputDecoration(
                         labelText: 'Choose your blood group',
@@ -140,7 +141,6 @@ class _SignUpState extends State<SignUp> {
                         print(newValue);
                       },
                     ),
-                    const SizedBox(height: 20),
                     CheckboxListTile(
                       title: const Text(
                         'As a donor',
@@ -154,7 +154,6 @@ class _SignUpState extends State<SignUp> {
                       activeColor: const Color.fromARGB(255, 255, 7, 7),
                       controlAffinity: ListTileControlAffinity.leading,
                     ),
-                    const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
@@ -170,18 +169,13 @@ class _SignUpState extends State<SignUp> {
                             ),
                       ),
                     ),
-                    const SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text('Already have an account?'),
                         TextButton(
                           onPressed: () {
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                builder: (context) => const Login(),
-                              ),
-                            );
+                            Navigator.of(context).pop();
                           },
                           child: const Text('Sign In'),
                         ),

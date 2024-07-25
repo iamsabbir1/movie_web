@@ -1,5 +1,10 @@
 import 'package:blood_management_app/background/background.dart';
+import 'package:blood_management_app/screens/blood_req.dart';
+import 'package:blood_management_app/screens/chats.dart';
+import 'package:blood_management_app/screens/home_screen.dart';
+import 'package:blood_management_app/screens/profile.dart';
 import 'package:blood_management_app/widgets/login.dart';
+import 'package:blood_management_app/widgets/settings.dart';
 import 'package:flutter/material.dart';
 
 class BloodManagementApp extends StatefulWidget {
@@ -19,10 +24,13 @@ class _BloodManagementAppState extends State<BloodManagementApp> {
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
         actions: [
+          if (_selectedIndex == 3)
+            IconButton(
+              icon: const Icon(Icons.search),
+              onPressed: () {},
+            ),
           PopupMenuButton(
             onSelected: (value) {
-              print("Selected: $value");
-              // Add your menu action here
               if (value == 2) {
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
@@ -30,113 +38,49 @@ class _BloodManagementAppState extends State<BloodManagementApp> {
                   ),
                 );
               }
+
+              if (value == 1) {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const Settings()));
+              }
             },
             itemBuilder: (context) {
-              return const [
-                PopupMenuItem(
+              return [
+                const PopupMenuItem(
                   value: 1,
                   child: Text('Settings'),
                 ),
-                PopupMenuItem(
-                  value: 2,
-                  child: Text('Logout'),
-                ),
+                if (_selectedIndex == 0)
+                  const PopupMenuItem(
+                    value: 3,
+                    child: Text('Logout'),
+                  ),
               ];
             },
           )
         ],
         backgroundColor: Theme.of(context).colorScheme.primary,
         title: Text(
-          'Blood Management App',
+          _selectedIndex == 0
+              ? 'Blood Management App'
+              : _selectedIndex == 1
+                  ? 'Blood Request'
+                  : 'Chats',
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
                 color: Colors.white,
               ),
         ),
       ),
-      body: (_selectedIndex == 0)
-          ? Stack(
-              children: [
-                CustomPaint(
-                  size: const Size(500, 500),
-                  painter: CustomBackground(),
-                ),
-                ListView(
-                  children: [
-                    Card(
-                      elevation: 4.0, // Adjust the elevation as needed
-                      child: Container(
-                        width: 300, // Adjust the width as needed
-                        height: 150, // Adjust the height as needed
-                        padding: const EdgeInsets.all(
-                            16.0), // Adjust padding as needed
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Welcome to Blood Management App',
-                              textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.bodyLarge,
-                            ),
-                            const SizedBox(
-                                height: 10), // Space between text and button
-                            ElevatedButton(
-                              onPressed: () {
-                                // Add your button action here
-                              },
-                              child: const Text('Get Started'),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Card(
-                      elevation: 4.0, // Adjust the elevation as needed
-                      child: Container(
-                        padding:
-                            EdgeInsets.all(16.0), // Adjust padding as needed
-                        child: GridView.builder(
-                          shrinkWrap:
-                              true, // Use it to make GridView take minimum space
-                          physics:
-                              NeverScrollableScrollPhysics(), // Disables GridView scrolling
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2, // Number of columns
-                            crossAxisSpacing: 10, // Space between columns
-                            mainAxisSpacing: 10, // Space between rows
-                            childAspectRatio:
-                                3 / 2, // Aspect ratio of each item
-                          ),
-                          itemCount:
-                              4, // Number of items in the grid, adjust as needed
-                          itemBuilder: (BuildContext context, int index) {
-                            return Container(
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: Colors
-                                    .blue, // Background color of each item, adjust as needed
-                                borderRadius:
-                                    BorderRadius.circular(8), // Rounded corners
-                              ),
-                              child: Text(
-                                'Item ${index + 1}',
-                                style: const TextStyle(
-                                  color: Colors.white, // Text color
-                                ),
-                              ),
-                            );
-                          },
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            )
-          : Center(
-              child: Text('Page ${_selectedIndex + 1}'),
-            ),
+      body: _selectedIndex == 0
+          ? const HomeScreen()
+          : _selectedIndex == 1
+              ? const RequestScreen()
+              : const ChatsScreen(),
       bottomNavigationBar: BottomNavigationBar(
+        unselectedItemColor: Colors.white,
+        selectedLabelStyle: const TextStyle(
+          color: Colors.white,
+        ),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -147,8 +91,8 @@ class _BloodManagementAppState extends State<BloodManagementApp> {
             label: 'Request',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.message_rounded),
+            label: 'Chats',
           ),
         ],
         currentIndex: _selectedIndex,

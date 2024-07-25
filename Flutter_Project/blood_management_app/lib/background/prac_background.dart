@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HomeBackground extends CustomPainter {
+class PracBackground extends CustomPainter {
   //HomeBackground(this.colorScheme);
 
   //final Color colorScheme;

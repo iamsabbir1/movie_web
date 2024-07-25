@@ -1,27 +1,30 @@
 {
-    "version" : "2.0.0",
-    "tasks" : [
+    "version": "2.0.0",
+    "tasks": [
         {
-            "type": "cppbuild",
-            "label": "Modern OpenGl",
+            "label": "build",
+            "type": "shell",
             "command": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\g++.exe",
-            "args":[
+            "args": [
                 "-g",
                 "-std=c++17",
-                "-I${workspaceFolder}/include",
-                "-L${workspaceFolder}/lib",
-                "${workspaceFolder}/src/*.cpp",
-                "${workspaceFolder}/src/glad.c",
+                "-ID:\\VisualStudioCode\\OpenGL\\include",
+                "-LD:\\VisualStudioCode\\OpenGL\\lib",
+                "D:\\VisualStudioCode\\OpenGL\\src\\*.cpp",
+                "D:\\VisualStudioCode\\OpenGL\\src\\glad.c",
                 "-lglfw3",
                 "-lgdi32",
                 "-luser32",
+                "-lopengl32",
                 "-o",
-                "${workspaceFolder}/zmmr.exe",
+                "D:\\VisualStudioCode\\OpenGL\\zmmr.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "problemMatcher": ["$gcc"],
+            "problemMatcher": [
+                "$gcc"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -30,7 +33,6 @@
         }
     ]
 }
-
 
 
 

@@ -4,7 +4,7 @@ class CustomBackground extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint();
-    paint.color = const Color(0xFFD32F2F);
+    paint.color = const Color.fromARGB(255, 234, 1, 1);
     paint.style = PaintingStyle.fill;
 
     final path = Path();
