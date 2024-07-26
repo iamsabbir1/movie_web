@@ -8,16 +8,16 @@
             "args": [
                 "-g",
                 "-std=c++17",
-                "-ID:\\VisualStudioCode\\OpenGL\\include",
-                "-LD:\\VisualStudioCode\\OpenGL\\lib",
-                "D:\\VisualStudioCode\\OpenGL\\src\\*.cpp",
-                "D:\\VisualStudioCode\\OpenGL\\src\\glad.c",
+                "-ID:\\VisualStudioCode\\OpenGL_Glad\\include",
+                "-LD:\\VisualStudioCode\\OpenGL_Glad\\lib",
+                "D:\\VisualStudioCode\\OpenGL_Glad\\src\\*.cpp",
+                "D:\\VisualStudioCode\\OpenGL_Glad\\src\\glad.c",
                 "-lglfw3",
                 "-lgdi32",
                 "-luser32",
                 "-lopengl32",
                 "-o",
-                "D:\\VisualStudioCode\\OpenGL\\zmmr.exe"
+                "D:\\VisualStudioCode\\OpenGL_Glad\\zmmr.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

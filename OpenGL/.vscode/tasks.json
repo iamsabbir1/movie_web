@@ -7,16 +7,16 @@
             "command": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\gcc.exe",
             "args": [
                 "-g",
-                "-ID:\\VisualStudioCode\\OpenGL_Glew\\include",
-                "-LD:\\VisualStudioCode\\OpenGL_Glew\\lib",
-                "D:\\VisualStudioCode\\OpenGL_Glew\\src\\*.c",
+                "-ID:\\VisualStudioCode\\OpenGL\\include",
+                "-LD:\\VisualStudioCode\\OpenGL\\lib",
+                "D:\\VisualStudioCode\\OpenGL\\src\\*.c",
                 "-lglew32",
                 "-lglfw3",
                 "-lgdi32",
                 "-luser32",
                 "-lopengl32",
                 "-o",
-                "D:\\VisualStudioCode\\OpenGL_Glew\\main.exe"
+                "D:\\VisualStudioCode\\OpenGL\\main.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
